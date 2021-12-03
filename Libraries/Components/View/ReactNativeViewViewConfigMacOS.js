@@ -38,6 +38,7 @@ const ReactNativeViewViewConfigMacOS = {
     acceptsFirstMouse: true,
     acceptsKeyboardFocus: true,
     accessibilityTraits: true,
+    cursor: true,
     draggedTypes: true,
     enableFocusRing: true,
     onBlur: true,
@@ -49,12 +50,12 @@ const ReactNativeViewViewConfigMacOS = {
     onFocus: true,
     onKeyDown: true,
     onKeyUp: true,
-    validKeysDown: true,
-    validKeysUp: true,
     nextKeyViewTag: true, // TODO(macOS GH#768)
     onMouseEnter: true,
     onMouseLeave: true,
     tooltip: true,
+    validKeysDown: true,
+    validKeysUp: true,
   },
 };
 

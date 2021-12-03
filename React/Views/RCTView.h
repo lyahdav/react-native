@@ -12,6 +12,10 @@
 #import <React/RCTEventDispatcher.h> // TODO(OSS Candidate ISS#2710739)
 #import <React/RCTPointerEvents.h>
 
+#if TARGET_OS_OSX
+#import <React/RCTCursor.h>
+#endif
+
 #if !TARGET_OS_OSX // TODO(macOS GH#774)
 extern const UIAccessibilityTraits SwitchAccessibilityTrait;
 #endif // TODO(macOS GH#774)
@@ -128,6 +132,7 @@ extern const UIAccessibilityTraits SwitchAccessibilityTrait;
 /**
  * macOS Properties
  */
+@property (nonatomic, assign) RCTCursor cursor;
 @property (nonatomic, copy) RCTDirectEventBlock onDoubleClick;
 @property (nonatomic, copy) RCTDirectEventBlock onClick;
 @property (nonatomic, copy) RCTDirectEventBlock onMouseEnter;

@@ -14,6 +14,29 @@ const AnimatedNode = require('../Animated/nodes/AnimatedNode');
 
 import type {NativeColorValue} from './PlatformColorValueTypes';
 
+export type CursorValue = ?(
+  | 'alias'
+  | 'auto'
+  | 'col-resize'
+  | 'context-menu'
+  | 'copy'
+  | 'crosshair'
+  | 'default'
+  | 'disappearing-item'
+  | 'e-resize'
+  | 'grab'
+  | 'grabbing'
+  | 'n-resize'
+  | 'no-drop'
+  | 'not-allowed'
+  | 'pointer'
+  | 'row-resize'
+  | 's-resize'
+  | 'text'
+  | 'vertical-text'
+  | 'w-resize'
+);
+
 export type ____ColorValue_Internal = null | string | NativeColorValue;
 
 export type ColorArrayValue = null | $ReadOnlyArray<____ColorValue_Internal>;
@@ -584,6 +607,7 @@ export type ____ViewStyle_Internal = $ReadOnly<{|
   borderTopWidth?: number | AnimatedNode,
   opacity?: number | AnimatedNode,
   elevation?: number,
+  cursor?: CursorValue,
 |}>;
 
 export type ____FontWeight_Internal =
